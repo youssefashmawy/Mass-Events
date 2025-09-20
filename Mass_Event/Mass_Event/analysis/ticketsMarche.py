@@ -74,12 +74,33 @@ def mapping(data: pd.DataFrame) -> pd.DataFrame:
     return data
 
 
+def filters(data: pd.DataFrame) -> pd.DataFrame:
+    cities = ["cairo"]
+    year = 2025
+    month_num_start = 10
+    start_day = 1
+    start_date = datetime(year, month_num_start, start_day).strftime("%Y-%m-%d")
+    month_num_end = 12
+    end_day = 1
+    end_date = datetime(year, month_num_end, end_day).strftime("%Y-%m-%d")
+    return data[
+        (data["date_parsed"] >= start_date)
+        & (data["date_parsed"] <= end_date)
+        & (data["city"].isin(cities))
+    ]
+
+
 def main():
     data = pd.read_json(
         r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\events_meetup.json"
     )
     data = clean_data(data)
     data = mapping(data)
+    data_ = filters(data)
+    data_.to_excel(
+        r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\ticketMarche_filtered.xlsx",
+        index=False,
+    )
     data.to_csv(
         r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\ticketMarche_test.csv",
         index=False,
