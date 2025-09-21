@@ -5,7 +5,7 @@ from scrapy_playwright.page import PageMethod
 
 
 class MassEvent(scrapy.Spider):
-    name = "gather_ticketsmarche"
+    name = "gather_meetup"
 
     def start_requests(self):
         url = "https://www.meetup.com/find/eg--cairo/"
@@ -31,16 +31,16 @@ class MassEvent(scrapy.Spider):
         open_in_browser(response)
         page = response.meta["playwright_page"]
         await page.close()
-        events = response.css(".pt-ds2-12")
+        events = response.css("[data-event-label='Event Card']")
         for event in events:
             item = MassEventItem()
             item["event_name"] = event.css(
-                ".text-ds2-text-fill-primary-enabled::text"
+                ".ds2-m18.mt-ds2-4.line-clamp-2.max-w-full.text-ds2-text-fill-primary-enabled::text"
             ).extract()
             item["date"] = event.css(
-                ".truncate.text-ds2-text-fill-tertiary-enabled::text"
+                ".ds2-m12.min-w-0.truncate.text-ds2-text-fill-tertiary-enabled::text"
             ).extract()
-            item["location"] = event.css(".flex-shrink::text").extract()
+            item["location"] = event.css("::attr(href)").extract()
             yield item
 
     async def errback(self, failure):

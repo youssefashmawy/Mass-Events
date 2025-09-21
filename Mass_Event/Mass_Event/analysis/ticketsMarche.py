@@ -83,11 +83,17 @@ def filters(data: pd.DataFrame) -> pd.DataFrame:
     month_num_end = 12
     end_day = 1
     end_date = datetime(year, month_num_end, end_day).strftime("%Y-%m-%d")
-    return data[
+    _data = data[
         (data["date_parsed"] >= start_date)
         & (data["date_parsed"] <= end_date)
         & (data["city"].isin(cities))
     ]
+    _data.loc[:,"date"] = _data.loc[:,"date_parsed"]
+    _data.drop(columns=["date_parsed"])
+    _data.to_excel(
+        r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\attends_estimate.xlsx",
+        index=False,
+    )
 
 
 def main():
@@ -96,11 +102,13 @@ def main():
     )
     data = clean_data(data)
     data = mapping(data)
-    data_ = filters(data)
-    data_.to_excel(
-        r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\ticketMarche_filtered.xlsx",
-        index=False,
+    # After using AI to estimate attend's
+    filters(
+        pd.read_csv(
+            r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\attends_estimate.csv"
+        )
     )
+
     data.to_csv(
         r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\ticketMarche_test.csv",
         index=False,
