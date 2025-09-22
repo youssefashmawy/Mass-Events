@@ -26,7 +26,7 @@ class MassEvent(scrapy.Spider):
         )
 
     async def parse(self, response):
-        open_in_browser(response)
+        # open_in_browser(response)
         page = response.meta["playwright_page"]
         await page.close()
         events = response.css(".bg-light")

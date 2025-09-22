@@ -74,45 +74,56 @@ def mapping(data: pd.DataFrame) -> pd.DataFrame:
     return data
 
 
-def filters(data: pd.DataFrame) -> pd.DataFrame:
-    cities = ["cairo"]
-    year = 2025
-    month_num_start = 10
-    start_day = 1
-    start_date = datetime(year, month_num_start, start_day).strftime("%Y-%m-%d")
-    month_num_end = 12
-    end_day = 1
-    end_date = datetime(year, month_num_end, end_day).strftime("%Y-%m-%d")
+def filters(data: pd.DataFrame, cities: list, start_date: str, end_date: str):
+    """filters data frame based on city and date
+
+    Args:
+        data (pd.DataFrame): input dataframe
+        cities (list): list of cities you want to be included must be in lower form
+        start_date (str): start date in the following formate year-month-day
+        end_date (str): end date in the following formate year-month-day
+
+    """
+
+    data["date_parsed"] = pd.to_datetime(data["date_parsed"])
+    start_date = pd.to_datetime(start_date)
+    end_date = pd.to_datetime(end_date)
+
+    data.loc[:, "date"] = data["date_parsed"].dt.strftime("%Y-%m-%d")
+
+    cities = [c.lower() for c in cities]
     _data = data[
         (data["date_parsed"] >= start_date)
         & (data["date_parsed"] <= end_date)
         & (data["city"].isin(cities))
     ]
-    _data.loc[:,"date"] = _data.loc[:,"date_parsed"]
-    _data.drop(columns=["date_parsed"])
+    _data.drop(columns=["date_parsed"], inplace=True)
     _data.to_excel(
-        r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\attends_estimate.xlsx",
+        r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\attends_estimate_test.xlsx",
         index=False,
     )
 
 
 def main():
     data = pd.read_json(
-        r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\events_meetup.json"
+        r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\events_meetup_test.json"
     )
     data = clean_data(data)
     data = mapping(data)
-    # After using AI to estimate attend's
-    filters(
-        pd.read_csv(
-            r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\attends_estimate.csv"
-        )
-    )
 
+    # Saving data before filters for validation
     data.to_csv(
         r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\ticketMarche_test.csv",
         index=False,
     )
+    # AI()
+
+    # After using AI to estimate attend's
+
+    _data = pd.read_csv(
+        r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\attends_estimate.csv"
+    )
+    filters(_data, ["cairo"], "2025-10-3", "2025-12-1")
 
 
 if __name__ == "__main__":
