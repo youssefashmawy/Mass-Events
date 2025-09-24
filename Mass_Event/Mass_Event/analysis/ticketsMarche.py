@@ -132,4 +132,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-# scrapy crawl gather_ticketsmarche -o Mass_Event/analysis/TicketsMarche/events_meetup_test.json
+# 
