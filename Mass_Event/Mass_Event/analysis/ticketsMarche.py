@@ -127,7 +127,7 @@ def main():
     # After using AI to estimate attend's
 
     _data = pd.read_csv(f"{MAIN_PATH}attends_estimate.csv")
-    filters(_data, ["cairo"], "2025-10-3", "2025-10-12")
+    filters(_data, ["cairo"], "2025-10-3", "2025-10-5")
 
 
 if __name__ == "__main__":
