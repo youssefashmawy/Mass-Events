@@ -4,6 +4,8 @@ from geopy.geocoders import Nominatim
 from datetime import datetime, timedelta
 import re
 
+MAIN_PATH = "Mass_Event/Mass_Event/analysis/TicketsMarche/"
+
 
 def clean_data(data: pd.DataFrame) -> pd.DataFrame:
     data.loc[:, "location"] = data.loc[:, "location"].str[0]
@@ -62,9 +64,15 @@ def simplify_dates(df: pd.DataFrame, date_column="date"):
 
 
 def mapping(data: pd.DataFrame) -> pd.DataFrame:
-    ref = pd.read_csv(
-        r"E:\youssef ashmawy\programming projects\Python\Nokia Task\output\referance.csv"
-    )
+    """Maps cities for each venue from data pulled from website's api
+
+    Args:
+        data (pd.DataFrame): scrapped data
+
+    Returns:
+        pd.DataFrame: new data frame with the required fields
+    """
+    ref = pd.read_csv(f"{MAIN_PATH}referance.csv")
     ref.city = ref.city.str.lower()
     venue_mapping = ref.set_index("venue_name")["venue_address"].to_dict()
     city_mapping = ref.set_index("venue_name")["city"].to_dict()
@@ -99,32 +107,29 @@ def filters(data: pd.DataFrame, cities: list, start_date: str, end_date: str):
     ]
     _data.drop(columns=["date_parsed"], inplace=True)
     _data.to_excel(
-        r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\attends_estimate_test.xlsx",
+        f"{MAIN_PATH}attends_estimate_test.xlsx",
         index=False,
     )
 
 
 def main():
-    data = pd.read_json(
-        r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\events_meetup_test.json"
-    )
+    data = pd.read_json(f"{MAIN_PATH}events_meetup_test.json")
     data = clean_data(data)
     data = mapping(data)
 
     # Saving data before filters for validation
     data.to_csv(
-        r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\ticketMarche_test.csv",
+        f"{MAIN_PATH}ticketMarche_test.csv",
         index=False,
     )
     # AI()
 
     # After using AI to estimate attend's
 
-    _data = pd.read_csv(
-        r"E:\youssef ashmawy\programming projects\Python\Nokia Task\Mass_Event\Mass_Event\analysis\TicketsMarche\attends_estimate.csv"
-    )
-    filters(_data, ["cairo"], "2025-10-3", "2025-12-1")
+    _data = pd.read_csv(f"{MAIN_PATH}attends_estimate.csv")
+    filters(_data, ["cairo"], "2025-10-3", "2025-10-12")
 
 
 if __name__ == "__main__":
     main()
+# scrapy crawl gather_ticketsmarche -o Mass_Event/analysis/TicketsMarche/events_meetup_test.json

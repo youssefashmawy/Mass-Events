@@ -1,13 +1,178 @@
 [
     {
         "event_name": [
-            "Cityscape Summit"
+            "Cityscape Egypt 2025 - VIP Experience (Full Access)"
         ],
         "date": [
-            "Sep 23 | 10:00 AM"
+            "24th to 27th of September 2025"
         ],
         "location": [
-            "St. Regis New Administrative Capital"
+            "Egypt International Exhibition Center "
+        ]
+    },
+    {
+        "event_name": [
+            "Mahib Sleat | 5mstashr | Shobra El General | El Waili"
+        ],
+        "date": [
+            "Sep 24 | 09:00 PM"
+        ],
+        "location": [
+            "Cairo Jazz Club 610"
+        ]
+    },
+    {
+        "event_name": [
+            "CFW X GEM Talks"
+        ],
+        "date": [
+            "Sep 26 | from 11:00 AM to 05:00 PM"
+        ],
+        "location": [
+            "Open Air Gallery, Grand Egyptian Museum"
+        ]
+    },
+    {
+        "event_name": [
+            "Marwa Nagy - 50th anniversary of Umm Kalthoum"
+        ],
+        "date": [
+            "Sep 26 | 08:00 PM"
+        ],
+        "location": [
+            "Theatro Arkan"
+        ]
+    },
+    {
+        "event_name": [
+            "Cityscape Egypt 2025 - VIP Experience (Day 4)"
+        ],
+        "date": [
+            "Sep 27 | 12:00 PM"
+        ],
+        "location": [
+            "Egypt International Exhibition Center "
+        ]
+    },
+    {
+        "event_name": [
+            "Hona ElQahera"
+        ],
+        "date": [
+            "Oct 01 | 08:00 PM"
+        ],
+        "location": [
+            "Theatro Arkan"
+        ]
+    },
+    {
+        "event_name": [
+            "Lena Chamamyan x Theatro Arkan"
+        ],
+        "date": [
+            "Oct 02 | 08:00 PM"
+        ],
+        "location": [
+            "Theatro Arkan"
+        ]
+    },
+    {
+        "event_name": [
+            "The Story of Colors"
+        ],
+        "date": [
+            "Oct 03 | 06:00 PM"
+        ],
+        "location": [
+            "Theatro Gallery"
+        ]
+    },
+    {
+        "event_name": [
+            "Mina Nader X Theatro Arkan"
+        ],
+        "date": [
+            "Oct 03 | 09:00 PM"
+        ],
+        "location": [
+            "Theatro Arkan"
+        ]
+    },
+    {
+        "event_name": [
+            "Lily Farid X The Ayoub Sisters (Egypt/ Scotland)"
+        ],
+        "date": [
+            "Oct 04 | 09:30 PM"
+        ],
+        "location": [
+            "Ewart Memorial Hall, AUC Tahrir Square"
+        ]
+    },
+    {
+        "event_name": [
+            "Aida El Ayoubi"
+        ],
+        "date": [
+            "Oct 05 | 09:30 PM"
+        ],
+        "location": [
+            "Ewart Memorial Hall, AUC Tahrir Square"
+        ]
+    },
+    {
+        "event_name": [
+            "Flex X Boom Room"
+        ],
+        "date": [
+            "Oct 08 | 08:00 PM"
+        ],
+        "location": [
+            "Boom Room, Open Air Mall, Madinaty"
+        ]
+    },
+    {
+        "event_name": [
+            "Saleh El-Nawawy X Anfoshy (Alexandria)"
+        ],
+        "date": [
+            "Oct 10 | 08:00 PM"
+        ],
+        "location": [
+            "Al Anfoushy Theater"
+        ]
+    },
+    {
+        "event_name": [
+            "Saleh El-Nawawy X Boom Room"
+        ],
+        "date": [
+            "Oct 13 | 09:00 PM"
+        ],
+        "location": [
+            "Boom Room, Open Air Mall, Madinaty"
+        ]
+    },
+    {
+        "event_name": [
+            "Downtown Contemporary Arts Festival (DCAF) - 13th Edition"
+        ],
+        "date": [
+            "From Oct 1 to Oct 26"
+        ],
+        "location": [
+            "Rawabet Art Space"
+        ]
+    },
+    {
+        "event_name": [
+            "Ibrahim Maalouf"
+        ],
+        "date": [
+            "Dec 20 | 07:00 PM"
+        ],
+        "location": [
+            "Concert Hall - New Capital"
         ]
     },
     {
@@ -155,6 +320,17 @@
     },
     {
         "event_name": [
+            "Oliver by Fabrica X Theatro Arkan"
+        ],
+        "date": [
+            "Oct 16 to Oct 18 | 08:00 PM"
+        ],
+        "location": [
+            "Theatro Arkan"
+        ]
+    },
+    {
+        "event_name": [
             "SYNC Summit"
         ],
         "date": [
@@ -162,17 +338,6 @@
         ],
         "location": [
             "O West Orascom Development"
-        ]
-    },
-    {
-        "event_name": [
-            "Comedy Therapy"
-        ],
-        "date": [
-            "Sep 23 | 09:00 PM"
-        ],
-        "location": [
-            "Cairo Jazz Club 610"
         ]
     },
     {
@@ -309,13 +474,24 @@
     },
     {
         "event_name": [
-            "Saleh El-Nawawy X Boom Room"
+            "Saleh El-Nawawy x Boom Room 2nd Show."
         ],
         "date": [
-            "Oct 13 | 09:00 PM"
+            "Oct 12 | 09:00 PM"
         ],
         "location": [
             "Boom Room, Open Air Mall, Madinaty"
+        ]
+    },
+    {
+        "event_name": [
+            "Cairokee"
+        ],
+        "date": [
+            "Oct 24 | 09:00 PM"
+        ],
+        "location": [
+            "El Arena"
         ]
     },
     {
@@ -327,171 +503,6 @@
         ],
         "location": [
             "Zed Park, Elsheikh Zayed"
-        ]
-    },
-    {
-        "event_name": [
-            "Cityscape Egypt 2025 - VIP Experience (Full Access)"
-        ],
-        "date": [
-            "24th to 27th of September 2025"
-        ],
-        "location": [
-            "Egypt International Exhibition Center "
-        ]
-    },
-    {
-        "event_name": [
-            "Mahib Sleat | 5mstashr | Shobra El General | El Waili"
-        ],
-        "date": [
-            "Sep 24 | 09:00 PM"
-        ],
-        "location": [
-            "Cairo Jazz Club 610"
-        ]
-    },
-    {
-        "event_name": [
-            "CFW X GEM Talks"
-        ],
-        "date": [
-            "Sep 26 | from 11:00 AM to 05:00 PM"
-        ],
-        "location": [
-            "Open Air Gallery, Grand Egyptian Museum"
-        ]
-    },
-    {
-        "event_name": [
-            "Marwa Nagy - 50th anniversary of Umm Kalthoum"
-        ],
-        "date": [
-            "Sep 26 | 08:00 PM"
-        ],
-        "location": [
-            "Theatro Arkan"
-        ]
-    },
-    {
-        "event_name": [
-            "Cityscape Egypt 2025 - VIP Experience (Day 4)"
-        ],
-        "date": [
-            "Sep 27 | 12:00 PM"
-        ],
-        "location": [
-            "Egypt International Exhibition Center "
-        ]
-    },
-    {
-        "event_name": [
-            "Hona ElQahera"
-        ],
-        "date": [
-            "Oct 01 | 08:00 PM"
-        ],
-        "location": [
-            "Theatro Arkan"
-        ]
-    },
-    {
-        "event_name": [
-            "Lena Chamamyan x Theatro Arkan"
-        ],
-        "date": [
-            "Oct 02 | 08:00 PM"
-        ],
-        "location": [
-            "Theatro Arkan"
-        ]
-    },
-    {
-        "event_name": [
-            "The Story of Colors"
-        ],
-        "date": [
-            "Oct 03 | 06:00 PM"
-        ],
-        "location": [
-            "Theatro Gallery"
-        ]
-    },
-    {
-        "event_name": [
-            "Mina Nader X Theatro Arkan"
-        ],
-        "date": [
-            "Oct 03 | 09:00 PM"
-        ],
-        "location": [
-            "Theatro Arkan"
-        ]
-    },
-    {
-        "event_name": [
-            "Lily Farid X The Ayoub Sisters (Egypt/ Scotland)"
-        ],
-        "date": [
-            "Oct 04 | 09:30 PM"
-        ],
-        "location": [
-            "Ewart Memorial Hall, AUC Tahrir Square"
-        ]
-    },
-    {
-        "event_name": [
-            "Aida El Ayoubi"
-        ],
-        "date": [
-            "Oct 05 | 09:30 PM"
-        ],
-        "location": [
-            "Ewart Memorial Hall, AUC Tahrir Square"
-        ]
-    },
-    {
-        "event_name": [
-            "Flex X Boom Room"
-        ],
-        "date": [
-            "Oct 08 | 09:00 PM"
-        ],
-        "location": [
-            "Boom Room, Open Air Mall, Madinaty"
-        ]
-    },
-    {
-        "event_name": [
-            "Saleh El-Nawawy X Anfoshy (Alexandria)"
-        ],
-        "date": [
-            "Oct 10 | 08:00 PM"
-        ],
-        "location": [
-            "Al Anfoushy Theater"
-        ]
-    },
-    {
-        "event_name": [
-            "Oliver by Fabrica X Theatro Arkan"
-        ],
-        "date": [
-            "Oct 16 to Oct 18 | 08:00 PM"
-        ],
-        "location": [
-            "Theatro Arkan"
-        ]
-    },
-    {
-        "event_name": [
-            "Ibrahim Maalouf"
-        ],
-        "date": [
-            "Dec 20 | 07:00 PM"
-        ],
-        "location": [
-            "Concert Hall - New Capital"
         ]
     }
 ]
