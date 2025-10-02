@@ -36,7 +36,7 @@ Run the Scrapy spider to collect event data:
 
 ```bash
 cd Mass_Event
-scrapy crawl gather_ticketsmarche -o analysis/TicketsMarche/events_meetup_test.json
+scrapy crawl gather_ticketsmarche -o Mass_Event/analysis/TicketsMarche/events_meetup_test.json
 ```
 
 ### 2. Data Processing
@@ -85,6 +85,7 @@ filters(_data, ["cairo", "giza"], "2025-10-01", "2025-12-31")
 ## Project Structure
 
 The main components are:
+
 - `Mass_Event/spiders/gather.py` - Web scraping spider
 - `Mass_Event/analysis/ticketsMarche.py` - Data processing script
 - `output/referance.csv` - Venue reference data
